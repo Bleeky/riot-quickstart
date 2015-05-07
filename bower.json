@@ -1,0 +1,16 @@
+{
+  "name": "riot-playground",
+  "version": "1.0.0",
+  "homepage": "none",
+  "description": "This repo is a playground for RiotJs.",
+  "keywords": [
+    "playground"
+  ],
+  "authors": [
+    "Quentin Hausser"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "basscss": "~6.0.0"
+  }
+}
