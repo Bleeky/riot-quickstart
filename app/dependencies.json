@@ -1,9 +1,9 @@
 {
-  "name": "common",
-  "js": [
-    "basscss"
-  ],
-  "css": [
-  ],
-  "debug": true
+    "name": "common",
+    "js": [
+        "riot",
+        "basscss"
+    ],
+    "css": [],
+    "debug": true
 }

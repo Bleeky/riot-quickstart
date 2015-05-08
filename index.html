@@ -13,13 +13,10 @@
     </div>
     <div class="px2">Welcome</div>
   </div>
+  <comment-box></comment-box>
   <br>
-  <div ng-controller='TestController as test'>
-    {{ test.test }}
-    {{ test.roger }}
-    {{ test.gulp }}
-  </div>
   <script src="app/build/all.js"></script>
+  <script>riot.mount('comment-box', {title: 'Comments'})</script>
 </body>
 
 </html>

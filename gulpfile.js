@@ -14,6 +14,7 @@ var karma = require('gulp-karma');
 var gprompt = require('gulp-prompt');
 var git = require('gulp-git');
 var shell = require('gulp-shell');
+var riot = require('gulp-riot');
 
 var gJSBuild = [];
 var gCSSBuild = [];
@@ -36,7 +37,10 @@ gulp.task('styles', ['javascripts'], function () {
 // Compile, concat and minify all developped JS.
 gulp.task('javascripts', ['dependencies'], function () {
     gJSBuild.push('./app/build/traveller.js');
-    return gulp.src(['./app/*.js', './app/components/**/*.js', './app/shared/**/*.js'])
+    return gulp.src(['./app/*.js', './app/components/**/*.js', './app/shared/**/*.js',
+            './app/*.tag', './app/components/**/*.tag', './app/shared/**/*.tag'
+        ])
+        .pipe(riot())
         .pipe(concat('traveller.js'))
         .pipe(gulp.dest('app/build/'));
 });
